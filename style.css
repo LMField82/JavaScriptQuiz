@@ -1,1 +1,83 @@
+header {
+    background-color: #ffffff;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    border: 1px solid #cccccc;
+    z-index: 10;
+}
+body {
+    background-image: url('../JavaScriptQuiz/images/hotel-wallpaper\ copy.png');
+    background-color: gray;
+}
+#timerBox {
+    background-color: #4aaaa5;
+    color: white;
+    font-size: 28px;
+    padding: 11px;
+    position: fixed;
+    top: 0;
+    left: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#navbar {
+    float: right;
+    margin-right: 20px;    
+}
+#navbar a {
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #777777;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    overflow: auto;
+}
+#navbar a:hover {
+    font-size: 20px;
+    color: gray;
+}
 
+.container {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.col-sm {
+    margin: auto;
+}
+
+h2 {
+    padding: 20px 10px 20px 10px;
+    border-bottom: 1px solid #cccccc;
+    color: #4aaaa5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+#startQuiz {
+    padding: 10px;
+    background-color: #4aaaa5;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#submit {
+    padding: 10px;
+    background-color: #4aaaa5;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
