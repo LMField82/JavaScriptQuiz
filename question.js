@@ -1,38 +1,52 @@
 var questions = [
     {
-      title: "Commonly used data types DO NOT include:",
-      choices: ["strings", "booleans", "alerts", "numbers"],
-      answer: "alerts"
+      question: "Commonly used data types DO NOT include:",
+      choiceA: "strings", 
+      choiceB: "booleans", 
+      choiceC: "alerts", 
+      choiceD: "numbers",
+      correct: "choiceC",
     },
     {
-      title: "The condition in an if / else statement is enclosed within ____.",
-      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-      answer: "parentheses"
+      question: "The condition in an if / else statement is enclosed within ____.",
+      choiceA: "quotes", 
+      choiceB: "curly brackets", 
+      choiceC: "parentheses", 
+      choiceD: "square brackets",
+      correct: "choiceC",
     },
     {
-      title: "In which HTML element do we put the JavaScript?",
-      choices: ["<javascript>", "<scripting>", "<js>", "<script>"],
-      answer: "<script>"
+      question: "In which HTML element do we put the JavaScript?",
+      choiceA: "<javascript>", 
+      choiceB: "<scripting>", 
+      choiceC: "<js>", 
+      choiceD: "<script>",
+      correct: "choiceD",
     },
     {
-      title: "How do you write 'Hello World' in an alert box?",
-      choices: ["alert('Hello World');", "alertBox('Hello World');", "msg('Hello World');", "msgBox('Hello World');"],
-      answer: "alert('Hello World');"
+      question: "How do you write 'Hello World' in an alert box?",
+      choiceA: "alert('Hello World');",
+      choiceB: "msg('Hello World');", 
+      choiceC: "msgBox('Hello World');", 
+      choiceD: "alertBox('Hello World');", 
+      correct: "choiceA",
     },
     {
-      title: "How does a FOR loop start?",
-      choices: ["for (i = 0; i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5", "for (i <= 5; i++)"],
-      answer: "for (i = 0; i <= 5; i++)"
+      question: "How does a FOR loop start?",
+      choiceA: "for (i = 0; i <= 5; i++)",
+      choiceB: "for (i = 0; i <= 5)",
+      choiceC: "for i = 1 to 5", 
+      choiceD: "for (i <= 5; i++)", 
+      correct: "choiceA",
     },
     {
-      title: "An array needs to be enclosed in ____________.",
-      choices: ["{}", "()", "[]", "{()}"],
-      answer: "[]"
+      question: "An array needs to be enclosed in ____________.",
+      choiceA: "{}",
+      choiceB: "[]",
+      choiceC: "()",
+      choiceD: "{()}", 
+      correct: "choiceB",
     },
-    {
-      title: "How does a FOR loop start?",
-      choices: ["for (i = 0; i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5", "for (i <= 5; i++)"],
-      answer: "for (i = 0; i <= 5; i++)"
-    }
-
   ];
+
+  
