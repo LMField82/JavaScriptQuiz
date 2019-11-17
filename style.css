@@ -8,6 +8,8 @@ header {
     border: 1px solid #cccccc;
     z-index: 10;
 }
+
+
 body {
     background-image: url('../JavaScriptQuiz/images/hotel-wallpaper\ copy.png');
     background-color: gray;
@@ -69,6 +71,10 @@ h2 {
     text-decoration: none;
     margin-bottom: 15px;
     font-size: 18px;
+}
+
+.answerButtons {
+    justify-items: center;
 }
 
 #submit {

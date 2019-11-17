@@ -6,15 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link type="text/JavaScript" href="script.js">
-    <link type="text/JavaScript" href="question.js">
+    <link type="text/css" rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <header>
+    <header id="header">
         
             <h2 id="timer">Timer</h2>
-            <div id="counter" style="display: none;">tick tock</div>
+            <div id="counter" style="display: none;"></div>
         
             <div id="navbar">
                 <div id="links">
@@ -26,26 +24,25 @@
                 
         <div id="title"><h2>JavaScript Quiz</h2></div>
             
-        <div><h3 id="quiz" style="display: none;">Question goes here</h3></div>
+        <div id="result"></div>
                 
         <div id="questionBox">
+           <div id="quiz"></div> 
             <p id="welcome" style="display: block;">Welcome to my JavaScript Quiz!<br>This is a timed quiz with 6 questions. You will get 15 seconds per question.<br>If you answer incorrectly, you will be penalized 10 seconds off your remaining time. <br>The quiz ends when you finish or when the time runs out.<br>Good Luck!</p>       
-             <button id="startQuiz" class="btn btn-primary" type="submit" >Start Quiz</button>
+             <button id="startQuiz" class="btn btn-primary" type="submit" style="display: block;">Start Quiz</button>
         </div>
             
                 <div id="answerChoiceBox">
-                    <button class="choiceA answerButtons" style="display: none;">A</button>
-                    <button class="choiceB answerButtons" style="display: none;">B</button>
-                    <button class="choiceC answerButtons" style="display: none;">C</button>
-                    <button class="choiceD answerButtons" style="display: none;">D</button>
+                
                 </div>
-            <form action="/action_page.php" id="highScore" style="opacity: 0;">
-                First name: <input type="text" name="fname">
-                <input type="submit" value="Submit">
+            <form id="highScore" style="display: none;">
+                First name: <input type="text" id='typeName' name="fname">
+                <input id="score" type="submit" value="Submit">
             </form>       
     </div>
-    <script type="text/JavaScript" href="script.js"></script>
-    <script type="text/JavaScript" href="question.js"></script>
+    <script type="text/JavaScript" src="question.js"></script>
+    <script type="text/JavaScript" src="script.js"></script>
+    
     
 </body>
 </html>
