@@ -12,11 +12,11 @@
     <header id="header">
         
             <h2 id="timer">Timer</h2>
-            <div id="counter" style="display: none;"></div>
+            <div id="counter" style="visibility: hidden;"></div>
         
             <div id="navbar">
                 <div id="links">
-                    <a href="#" id="highScores">High Scores</a>
+                    <a href="highscores.html" id="highScores">High Scores</a>
                 </div>
             </div>
     </header>
@@ -29,12 +29,10 @@
         <div id="questionBox">
            <div id="quiz"></div> 
             <p id="welcome" style="display: block;">Welcome to my JavaScript Quiz!<br>This is a timed quiz with 6 questions. You will get 15 seconds per question.<br>If you answer incorrectly, you will be penalized 10 seconds off your remaining time. <br>The quiz ends when you finish or when the time runs out.<br>Good Luck!</p>       
-             <button id="startQuiz" class="btn btn-primary" type="submit" style="display: block;">Start Quiz</button>
+             <button id="startQuiz" class="btn btn-primary" type="submit">Start Quiz</button>
         </div>
             
-                <div id="answerChoiceBox">
-                
-                </div>
+                <div id="answerChoiceBox"></div>
             <form id="highScore" style="display: none;">
                 First name: <input type="text" id='typeName' name="fname">
                 <input id="score" type="submit" value="Submit">

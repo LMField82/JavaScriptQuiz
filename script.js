@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   //2. On click of start button, start button hides
   document.getElementById("startQuiz").addEventListener("click", function() {
     var disappearButton = document.getElementById("startQuiz");
-    if (disappearButton.style.display === "block") {
       disappearButton.style.display = "none";
-    }
+
     var disappearWelcome = document.getElementById("welcome");
     if (disappearWelcome.style.display === "block") {
       disappearWelcome.style.display = "none";
@@ -16,22 +15,31 @@ document.addEventListener("DOMContentLoaded", function() {
     var count = 0;
     var timer = 90; 
     var counterDisplay = document.getElementById("counter");
-    if (counterDisplay.style.display === "none") {
-      counterDisplay.style.display = "block";
+    if (counterDisplay.style.visibility === "hidden") {
+      counterDisplay.style.visibility = "visible";
     }
 
     var countdown = setInterval(function() {
       timer--;
       document.getElementById("counter").innerHTML = timer + "s";
-
-      if (timer === 0) {
+    if (timer === 0) {
         clearInterval(countdown);
+        endQuiz();
+      }else if (timer < 0) {
+          clearInterval(countdown);
+          endQuiz();
+          document.getElementById("result").innerHTML = "Your final score is 0";
       }
+
+      
     }, 1000);
 
+
+//to end the quiz
     var endQuiz = function() {
-      clearInterval(countdown)
+        clearInterval(countdown)
       console.log("QUIZ OVER")
+      
       var highScore = localStorage.getItem("highScore");
       var addText = "";
       if (timer > highScore) {
@@ -42,24 +50,27 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("highScore").style.display = "block";
       document.getElementById('score').addEventListener('click', function(e){
         e.preventDefault()
-       var playerName = document.getElementById('typeName').value;
-       localStorage.setItem(playerName, timer);
+       var quizTaker = document.getElementById('typeName').value;
+       localStorage.setItem(quizTaker, timer);
     });
     
-};
+}; //put something to show correct answer
     var correct = function() {
-      document.getElementById("result").innerHTML = "correct";
+      document.getElementById("result").innerHTML = "The last question was correct";
       count++;
+      
       if (count === questions.length) {
         endQuiz();
       } else {
         displayQuestions();
       }
-    };
+    };//put something to show incorrect answer
     var incorrect = function() {
-      document.getElementById("result").innerHTML = "incorrect";
+      document.getElementById("result").innerHTML = "The last question was incorrect";
       count++;
       timer -= 10;
+
+      
       if (count === questions.length) {
         endQuiz();
       } else {
@@ -94,17 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     displayQuestions();
 
-    //On click of start button, quiz starts
-    // var showQuestion = document.getElementById("quiz");
-    // if (showQuestion.style.display === "none") {
-    //     showQuestion.style.display = "block";
-    // }
-
-    /*var test = document.getElementsByClassName("answerButtons");*/
-    // document.getElementById("choiceA").style.display = "block";
-    // document.getElementById("choiceB").style.display = "block";
-    // document.getElementById("choiceC").style.display = "block";
-    // document.getElementById("choiceD").style.display = "block";
+        // var allHighScores = JSON.parse(localStorage.getItem("typeName"));
+        // console.log("allHighScoes.value", allHighScores);
   });
 
   //3. Quiz
@@ -136,42 +138,3 @@ document.addEventListener("DOMContentLoaded", function() {
   //pull data from local storage to display on HS page
 });
 
-//1. create a call to action
-// var choiceA = document.getElementById("A");
-// var choiceB = document.getElementById("B");
-// var choiceC = document.getElementById("C");
-// var choiceD = document.getElementById("D");
-// var question = document.getElementById("question");
-
-//     //need a landing page and a start quiz button
-//     //add listener to start quiz button
-//     start.addEventListener("click", startQuiz);
-
-//when start quiz button is clicked hide button - captain planet ex
-
-//add  submit and Back button
-
-//****Questions start here****/
-
-//2. Countdown timer
-//must start at 0.
-//on click of start quiz button, countdown timer starts at 75seconds and counts down to 0.
-//timer stops at 0 or when the questions are finished.
-//wrong answer subtracts 10 seconds from remaining time.
-
-//3. Questions - place js question file before other js file
-//Question 1 appears on start quiz button click
-//flash correct or wrong on the submit button click
-//new question appears after answer is displayed correct or wrong (maybe 500ms after submit click??)
-//if else to show wrong/right after click submit button
-//stores answer as correct or wrong
-//quiz ends on submit button click of last question.
-//display score page after submit buttom is clicked - have a finish button
-
-//4. High Scores stored in browser (can be separate html file)
-//prompt user for initials after score page on finish button click
-//text input box for initials
-//button to submit initials with score
-//display (new) page with high scores on submit button click
-//have button to clear high scores on this page
-//have button to restart quiz on this page too
